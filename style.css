@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Rock+Salt&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo img{
+    width: 200px;
+}
+
+.navigation{
+    display: block;
+}
+
+.navigation a{
+    margin-right: 30px;
+    font-size: 15px;
+    position: relative;
+}
+
+.navigation a::before{
+    position: absolute;
+    content: '';
+    background-color: orange;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+
+.navigation a:hover::before{
+    width: 100%;
+    transition: .5s;
+}
+
+/* BurgerMenu */
+.burgerMenu{
+    display: none;
+}
+
+.bars{
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 3px;
+}
+
+/* Sidebar */
+.sidebar{
+    background-color: #172246;
+    padding: 50px;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    z-index: 1000;
+}
+
+.sidebar ul li{
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.sidebar.change{
+    left: 0;
+    transition: .5s;
+}
+
+
+.hero{
+    background-image: url('gojo.png');
+    height: 658px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    padding: 0 8%;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.hero .teks{
+    z-index: 100;
+    position: relative;
+    color: #fff;
+    margin-top: 180px;
+}
+
+.hero .teks h2{
+    font-size: 40px;
+    font-weight: lighter;
+    margin-left: 20px;
+}
+
+.hero .teks h3{
+    font-size: 70px;
+    font-style: italic;
+}
+
+.hero img{
+    width: 350px;
+    height: 200px;
+}
+
+.movie{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.movie .title{
+    color: #fff;
+    z-index: 100;
+    position: relative;
+    text-align: right;
+    margin-top: -40px;
+}
+
+.movies .card{
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movies .card img{
+    width: 100%;
+}
+
+.btnPly{
+    position: absolute;
+    z-index: 1000;
+    top: 30%;
+    left: 40%;
+    color: #fff;
+    font-size: 25px;
+    background-color: orange;
+    padding: 10px 20px;
+    border-radius: 50%;
+}
+
+
+@media (max-width:480px) {
+    .burgerMenu{
+        display: block;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .hero{
+        background-image: url('gojo.png');
+        background-position: center;
+    }
+    
+    .hero img{
+        width: 250px;
+    }
+
+    .movie .title{
+        text-align: center;
+        margin-top: -10px;
+    }
+    
+    .hero .teks{
+        margin-top: 100px;
+    }
+}
